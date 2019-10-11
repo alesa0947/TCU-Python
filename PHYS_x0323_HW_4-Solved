@@ -1,0 +1,325 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Checking the Boolean operators:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n",
+      "True\n",
+      "True\n",
+      "True\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "a= False\n",
+    "b= True\n",
+    "c= False\n",
+    "\n",
+    "print(b and c)\n",
+    "print(b or c)\n",
+    "print(not a and b)\n",
+    "print((a and b) or not c)\n",
+    "print(not b and not (a or c))\n",
+    "\n",
+    "# make sure you make F and T in (true and false) capital so python can recognize they are booleans."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Testing the fragments of code to see if my output matches with python:\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n",
+      "9\n",
+      "8\n",
+      "7\n",
+      "6\n",
+      "5\n",
+      "4\n",
+      "0.0\n",
+      "1.0\n",
+      "2.0\n",
+      "3.0\n",
+      "4.0\n",
+      "10\n",
+      "9\n",
+      "8\n",
+      "7\n",
+      "letter # 0 is S\n",
+      "letter # 1 is n\n",
+      "letter # 2 is o\n",
+      "letter # 3 is w\n",
+      "letter # 4 is !\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Code 1:\n",
+    "num = 10\n",
+    "while num > 3:\n",
+    "    print (num)\n",
+    "    num = num - 1\n",
+    "    \n",
+    "#Code 2:\n",
+    "divisor = 2\n",
+    "for i in range(0,10,2):\n",
+    "    print (i/divisor)\n",
+    "\n",
+    "#Code 3:\n",
+    "num = 10\n",
+    "while True:\n",
+    "    if num < 7:\n",
+    "        break\n",
+    "    print(num)\n",
+    "    num -= 1\n",
+    "#  num = num - 1 is the same as num -=1\n",
+    "\n",
+    "\n",
+    "#Code 4:\n",
+    "count = 0\n",
+    "for letter in 'Snow!':\n",
+    "    print('letter #',count,\"is\",letter)\n",
+    "    count+=1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Ben Bitdiddle's messed up program:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "n = 10, i =-10\n",
+      "n = 10, i =-5\n",
+      "n = 10, i =-4\n",
+      "n = 10, i =-2\n",
+      "n = 10, i =-1\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 10\n",
+    "i = -10\n",
+    "\n",
+    "while i != 0 and i != 0:\n",
+    "    print((\"n = %i, i =%i\") %(n, i))\n",
+    "    if i % 2 == 0:\n",
+    "        i = i/2\n",
+    "    else:\n",
+    "        i = i+1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Ben an infinite loop and not using the variable (n). A solution would be to make (i) != 0 so that it doesn't run infinitely after it reaches one, and i != 0 so that it doesnot run infinitely after it reaches 0."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Testing to see python's output to conditionals:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "I'll take it!\n"
+     ]
+    }
+   ],
+   "source": [
+    "pay = 50000\n",
+    "location = \"California\"\n",
+    "\n",
+    "\n",
+    "\n",
+    "if location == \"U.S.S. Enterprise\":\n",
+    "    print(\"So long, Suckers!\")\n",
+    "    \n",
+    "elif location == \"Massachusetts\":\n",
+    "    if pay < 100000:\n",
+    "        print(\"no way\")\n",
+    "    else:\n",
+    "        print(\"I'll take it\")\n",
+    "elif location == \"California\" and pay > 40000:\n",
+    "    print(\"I'll take it!\")\n",
+    "elif pay > 60000:\n",
+    "    print(\"I'll Take it\")\n",
+    "else:\n",
+    "    print(\"no thanks, I can do better\")\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Finding Bugs in Bonnie's code: looks like the Bitdiddle's family doesn't like python much\n",
+    "\n",
+    "\n",
+    "<ol> Bug 1: int2 is not defined, it should be int_2. </ol>\n",
+    "<ol> Bug 2: the function returns the product of the integers instead of the remainder.to get the remainder, we need to return int_1%int_2. </ol>\n",
+    "<ol> Bug 3: a and b are unassigned variables. In order for *quotient(a,b)* to work, then there should be an assignment a =? and b=? above it. </ol>\n",
+    "<ol> Bug 4: quotient_ab and num are unassigned variables. </ol>\n",
+    "<ol> Bug 5: if and else statements are needed to test condition for large numbers. </ol>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(0.02247191011235955, 2)\n",
+      "(0.5, 1)\n",
+      "False\n",
+      "They are equal\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "def quotient (int_1,int_2):\n",
+    "    return(int_1/int_2, int_1%int_2)\n",
+    "\n",
+    "def large_num(num):\n",
+    "    if num > 10000:\n",
+    "        return(True)\n",
+    "    elif num == 10000:\n",
+    "        return \"They are equal\"\n",
+    "    else:\n",
+    "        return(False)\n",
+    "\n",
+    "print(quotient(2,89))\n",
+    "print(quotient(1,2))\n",
+    "print(large_num(1))\n",
+    "print(large_num(10000))\n",
+    "print(large_num(27000))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Mystery Program"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "think of a number between 1 and 100, but don't tell what you choose.\n",
+      "is it 51? yes\n",
+      "Wohoo! I got it\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"think of a number between 1 and 100, but don't tell what you choose.\")\n",
+    "min_n=1\n",
+    "max_n=100\n",
+    "right_answer= False\n",
+    "\n",
+    "\n",
+    "while not right_answer:\n",
+    "    mid_n=(max_n + min_n + 1)//2\n",
+    "    answer = input('is it ' + str(mid_n) + '? ')\n",
+    "    if answer[0] == 'y':\n",
+    "        right_answer = True\n",
+    "    elif answer.startswith('higher'):\n",
+    "        min_n = mid_n + 1\n",
+    "    elif answer.startswith('lower'):\n",
+    "        max_n = mid_n - 1\n",
+    "    else:\n",
+    "        print(\"sorry, i dont understand your answer\")\n",
+    "    \n",
+    "print('Wohoo! I got it')\n",
+    "\n",
+    "\n",
+    "# starts with 1 to 100, follows mid_n equation (answer: 51) if i choose higher,\n",
+    "# then my new min is 52 and my max is 100, so it find a new mid_n. keeps doing that till it finds your value"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
